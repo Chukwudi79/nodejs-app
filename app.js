@@ -1,15 +1,18 @@
 const express = require('express');
+// const addTwoNum = require('./app/http/controllers/additionController');
+// const ans = addTwoNum(addTwoNum(20, 8), 2);
 const app = new express();
-const port = 3001;
+const dotenv = require('dotenv').config();
+const port = process.env.APP_PORT || 3000;
+const {errorHandler} = require('./app/middlewares/errorMiddleware')
 
-const addTwoNum = require('./app/http/controllers/additionController');
-const ans = addTwoNum(addTwoNum(20, 8), 2);
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
-app.get('/', (req, res)=>{
-    res.send(`<h1>Hello Node ${ans} </h1>`);
-});
+app.use('/api/goals', require('./app/routes/goalRoutes'))
 
+// app.use(errorHandler);
 
 app.listen(3001, '127.0.0.1', function(){
     console.log(`server started on port ${port}`)
-})
+});
