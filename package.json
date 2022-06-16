@@ -1,8 +1,30 @@
 {
   "dependencies": {
+    "body-parser": "^1.20.0",
     "colors": "^1.4.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "mongoose": "^6.3.8"
-  }
+    "fast-csv": "^4.3.6",
+    "mongoose": "^6.3.8",
+    "multer": "^1.4.5-lts.1",
+    "mysql": "^2.18.1"
+  },
+  "name": "uploadtest",
+  "version": "1.0.0",
+  "description": "Uploading csv to mysql",
+  "main": "upload.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chukwudi79/nodejs-app.git"
+  },
+  "author": "Chukwudi Okorie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Chukwudi79/nodejs-app/issues"
+  },
+  "homepage": "https://github.com/Chukwudi79/nodejs-app#readme"
 }
